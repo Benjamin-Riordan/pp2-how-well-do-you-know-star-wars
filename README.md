@@ -106,3 +106,7 @@ Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` f
 ---
 
 Happy coding!
+
+
+# atributions and crediations 
+<a href="https://www.vecteezy.com/free-vector/starry-sky">Starry Sky Vectors by Vecteezy</a>
