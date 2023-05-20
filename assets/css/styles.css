@@ -44,8 +44,15 @@
     text-align: center;
 }
 
-#game-info{
+.game-info{
     font-size: 25px;
-    padding: 50px 50px;
+    padding: 30px 30px;
     text-align: center;
+}
+
+#level-selction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
 }
