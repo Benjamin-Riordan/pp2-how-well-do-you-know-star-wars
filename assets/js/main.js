@@ -1,1 +1,15 @@
-console.log("hello world")
+function welcomeUser(){
+    
+}
+
+function updateScore(){
+
+}
+
+function displayQuestion(level){
+
+}
+
+function levelSelect(){
+
+}
