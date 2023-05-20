@@ -24,6 +24,8 @@
     padding: 50px 0;
 }
 
+
+
 #srt-game-text{
     font-size: 40px;
     padding: 50px 0;
@@ -34,4 +36,16 @@
     font-size: 40px;
     padding: 0 20px;
     margin: 0 20px;
+}
+
+#new-header{
+    font-size: 50px;
+    padding: 50px 50px;
+    text-align: center;
+}
+
+#game-info{
+    font-size: 25px;
+    padding: 50px 50px;
+    text-align: center;
 }
