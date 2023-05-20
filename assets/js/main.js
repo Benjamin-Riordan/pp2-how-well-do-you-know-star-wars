@@ -10,8 +10,6 @@ function lauchQuiz(){
     let quizLaunched = document.getElementById("launch-Btn")
     quizLaunched.addEventListener("click",function(){
         welcomeUser();
-        getUsername()
-        levelSelect();
     });
 }
 
@@ -24,37 +22,46 @@ function welcomeUser(){
     <p class ="game-info"> Are you ready to take the quiz? </p>
     <p class ="game-info"> please pick your level:</p>
         <ul id =level-selction">
-            <li><button class ="Btn-style" id ="1" >Level 1(You cant get these wrong)</button>
+            <li><button class ="Btn-style" id ="level-1" >Level 1(You cant get these wrong)</button>
             </li>
-            <li><button class ="Btn-style" id ="2" >Level 2(You might get one wrong)</button>
+            <li><button class ="Btn-style" id ="level-2" >Level 2(You might get one wrong)</button>
             </li>
-            <li><button class ="Btn-style" id ="3" >Level 3(ok you will get one wrong)</button>
+            <li><button class ="Btn-style" id ="level-3" >Level 3(ok you will get one wrong)</button>
             </li>
-            <li><button class ="Btn-style" id ="4" >Level 4(ill be fair this is very diffcult)</button>
+            <li><button class ="Btn-style" id ="level-4" >Level 4(ill be fair this is very diffcult)</button>
             </li>
-            <li><button class ="Btn-style" id ="5" >Level 5(you need to be a jedi master to get these right)</button>
+            <li><button class ="Btn-style" id ="level-5" >Level 5(you need to be a jedi master to get these right)</button>
             </li>
         </ul>
     `
-}
-
-function levelSelect(){
-    let levelBtn = document.getElementsByClassName("Btn-style")
-    for (button of levelBtn){
-
+    let buttons = document.getElementsByTagName("button");
+    let levelSelected = ""
+    for (let button of buttons) {
+      button.addEventListener("click", function() {
+        levelSelected = button.id;
+        if (levelSelected === "level-1") {
+            displayQuestion(levelSelected)
+        } else if (levelSelected === "level-2") {
+            displayQuestion(levelSelected)
+        } else if (levelSelected === "level-3") {
+            displayQuestion(levelSelected)
+        } else if (levelSelected === "level-4") {
+            displayQuestion(levelSelected)
+        } else if (levelSelected === "level-5") {
+            displayQuestion(levelSelected)
+        } else {
+          console.log("No level selected");
+        }
+      });
     }
-
 }
-
 function updateScore(){
-
 }
 
 function displayQuestion(level){
 
+
 }
 
 function levelSelect(){
-    
-
 }
