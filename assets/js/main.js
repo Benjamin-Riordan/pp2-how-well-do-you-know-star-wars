@@ -9,17 +9,18 @@ function consoleTester(){
 function lauchQuiz(){
     let quizLaunched = document.getElementById("launch-Btn")
     quizLaunched.addEventListener("click",function(){
-        welcomeUser()
+        welcomeUser();
+        getUsername();
     });
 }
 
 function welcomeUser(){
     let gameArea = document.getElementById("game-area")
+    let userName = prompt("Hey please enter a user name")
     gameArea.innerHTML = `
-    <header id="new-header"> Hello and wellcome to the Star Wars quiz!</header>
-    <p class ="game-info">This quiz will test you knowlage, it has 5 diffculty levels and there are some very hard questions!<p>
+    <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
+    <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!<p>
     <p class ="game-info"> Are you ready to take the quiz? </p>
-    <p class ="game-info"> please enter your Name<input type="text" id = "username" placeholder="Enter your user name here"></input> </p>
     <p class ="game-info"> please pick your level:</p>
         <ul id =level-selction">
             <li><button class ="Btn-style" id ="level-1" >Level 1(You cant get these wrong)</button>
@@ -35,16 +36,6 @@ function welcomeUser(){
         </ul>
     `
 }
-
-function checkUserName(){
-    let userName =  ""
-    
-     
-}
-    
-
-
-
 
 function updateScore(){
 
