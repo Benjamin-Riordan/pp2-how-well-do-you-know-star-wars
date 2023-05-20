@@ -36,6 +36,16 @@ function welcomeUser(){
     `
 }
 
+function checkUserName(){
+    let userName =  ""
+    
+     
+}
+    
+
+
+
+
 function updateScore(){
 
 }
@@ -45,5 +55,6 @@ function displayQuestion(level){
 }
 
 function levelSelect(){
+    
 
 }
