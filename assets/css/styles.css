@@ -1,3 +1,9 @@
-h1{
-    color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@800&display=swap');
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* color: yellow; chnage this back to yellow once js logic is complted  */
+    font-family:'Trispace', sans-serif;
 }
