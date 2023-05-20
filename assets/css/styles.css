@@ -12,8 +12,26 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+#header{
+    font-size: 75px;
+    padding: 50px 0;
+}
+
+#srt-game-text{
+    font-size: 40px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#launch-Btn{
+    font-size: 40px;
+    padding: 0 20px;
+    margin: 0 20px;
 }

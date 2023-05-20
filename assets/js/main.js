@@ -1,3 +1,7 @@
+function lauchQuiz(){
+    
+}
+
 function welcomeUser(){
     
 }
