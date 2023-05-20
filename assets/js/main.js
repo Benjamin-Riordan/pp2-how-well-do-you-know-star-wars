@@ -19,8 +19,9 @@ function welcomeUser(){
     <header id="new-header"> Hello and wellcome to the Star Wars quiz!</header>
     <p class ="game-info">This quiz will test you knowlage, it has 5 diffculty levels and there are some very hard questions!<p>
     <p class ="game-info"> Are you ready to take the quiz? </p>
+    <p class ="game-info"> please enter your Name<input type="text" id = "username" placeholder="Enter your user name here"></input> </p>
     <p class ="game-info"> please pick your level:</p>
-        <ul id ="level-selction">
+        <ul id =level-selction">
             <li><button class ="Btn-style" id ="level-1" >Level 1(You cant get these wrong)</button>
             </li>
             <li><button class ="Btn-style" id ="level-2" >Level 2(You might get one wrong)</button>
