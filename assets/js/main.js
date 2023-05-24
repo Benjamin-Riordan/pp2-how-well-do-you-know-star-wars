@@ -151,6 +151,10 @@ const levels = [
     }
   ];
 
+  let currentQuestion = 0
+  let currentlevel = 0
+  let gameArea = document.getElementById("game-area")
+
 
 document.addEventListener("DOMContentLoaded",function(){
     lauchQuiz()
@@ -168,7 +172,7 @@ function lauchQuiz(){
 }
 
 function welcomeUser(){
-    let gameArea = document.getElementById("game-area")
+    // let gameArea = document.getElementById("game-area")
     let userName = prompt("Hey please enter a user name")
     gameArea.innerHTML = `
     <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
@@ -195,14 +199,19 @@ function welcomeUser(){
         levelSelected = button.id;
         if (levelSelected === "level-1") {
             displayQuestion(levelSelected)
+            console.log(levelSelected)
         } else if (levelSelected === "level-2") {
             displayQuestion(levelSelected)
+            console.log(levelSelected)
         } else if (levelSelected === "level-3") {
             displayQuestion(levelSelected)
+            console.log(levelSelected)
         } else if (levelSelected === "level-4") {
             displayQuestion(levelSelected)
+            console.log(levelSelected)
         } else if (levelSelected === "level-5") {
             displayQuestion(levelSelected)
+            console.log(levelSelected)
         } else {
           console.log("No level selected");
         }
@@ -212,5 +221,32 @@ function welcomeUser(){
 function updateScore(){
 }
 
-function displayQuestion(level){
-}
+function displayQuestion(levelSelected){
+  console.log(levelSelected)
+  let LevelStart = 0
+  for (let i = 0;i < levels.length; i ++){
+    if(levels[i].difficulty === levelSelected){
+      LevelStart = i
+      console.log(levels[i])
+      break
+    }
+  }
+
+  if(LevelStart !== 0 && levels[LevelStart].questions.length > currentQuestion){
+    const currentlevel = levels[LevelStart]
+    const currentQuestionToAsk = currentlevel.questions[currentQuestion]
+    const question = currentQuestionToAsk.question
+    const answerOptions = currentQuestionToAsk.options
+    const answer = currentQuestionToAsk.answer
+  
+  gameArea.innerHTML= `
+  <h1>${question}placeholder</h1>
+    <ul>
+        <li><button id="answer">${answerOptions}placeholder</button></li>
+        <li><button id="answer">${answerOptions}placeholder</button></li>
+        <li><button id="answer">${answerOptions}placeholder</button></li>
+        <li><button id="answer">${answerOptions}placeholder</button></li>
+    </ul>
+  `
+  ;
+  let answerButton = document.getElementById("answer")
