@@ -223,7 +223,7 @@ function updateScore(){
 
 function displayQuestion(levelSelected){
   console.log(levelSelected)
-  let LevelStart = 0
+  let LevelStart = -1
   for (let i = 0;i < levels.length; i ++){
     if(levels[i].difficulty === levelSelected){
       LevelStart = i
@@ -232,7 +232,7 @@ function displayQuestion(levelSelected){
     }
   }
 
-  if(LevelStart !== 0 && levels[LevelStart].questions.length > currentQuestion){
+  if(LevelStart !== -1 && levels[LevelStart].questions.length > currentQuestion){
     const currentlevel = levels[LevelStart]
     const currentQuestionToAsk = currentlevel.questions[currentQuestion]
     const question = currentQuestionToAsk.question
@@ -242,11 +242,28 @@ function displayQuestion(levelSelected){
   gameArea.innerHTML= `
   <h1>${question}placeholder</h1>
     <ul>
-        <li><button id="answer">${answerOptions}placeholder</button></li>
-        <li><button id="answer">${answerOptions}placeholder</button></li>
-        <li><button id="answer">${answerOptions}placeholder</button></li>
-        <li><button id="answer">${answerOptions}placeholder</button></li>
+        <li><button class="answer">${answerOptions[0]}</button></li>
+        <li><button class="answer">${answerOptions[1]}</button></li>
+        <li><button class="answer">${answerOptions[2]}</button></li>
+        <li><button class="answer">${answerOptions[3]}</button></li>
     </ul>
   `
   ;
-  let answerButton = document.getElementById("answer")
+  let answerButtons = document.getElementsByClassName("answer");
+  for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addEventListener("click", function() {
+      let selectedAnswer = answerButtons[i].textContent;
+      if (selectedAnswer === answer) {
+        alert("Well done, my young Padawan learner!");
+        correctScore++;
+        currentQuestion++;
+      } else {
+        alert("Sorry, that's wrong. Are you turning to the dark side?");
+        wrongScore++;
+        currentQuestion++;
+      }
+    }
+  );
+  }
+}
+}displayQuestion(levelSelected);
