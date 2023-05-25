@@ -151,23 +151,22 @@ const levels = [
     }
   ];
 
-  let currentQuestion = 0
-  let currentlevel = 0
-  let correctScore = 0
-  let wrongScore = 0
-  let userName =""
-  let gameArea = document.getElementById("game-area")
+  let currentQuestion = 0;
+  let correctScore = 0;
+  let wrongScore = 0;
+  let userName ="";
+  let gameArea = document.getElementById("game-area");
 
 
 document.addEventListener("DOMContentLoaded",function(){
-    lauchQuiz()
-})
+    lauchQuiz();
+});
 
 function updateScore(){
     let correctScoreMarker = document.getElementById("Cscores");
     let wrongScoreMarker = document.getElementById("Wscores");
-    correctScoreMarker.textContent = correctScore
-    wrongScoreMarker.textContent = wrongScore
+    correctScoreMarker.textContent = correctScore;
+    wrongScoreMarker.textContent = wrongScore;
 }
 
 function endGame(){
@@ -180,25 +179,25 @@ function endGame(){
         <button class="Btn-style" id="try-again">Try Again</button>
         `;
 
-    let tryAgainButton = document.getElementById("try-again")
+    let tryAgainButton = document.getElementById("try-again");
         tryAgainButton.addEventListener("click",function(){
-            currentQuestion = 0
-            correctScore = 0
-            wrongScore = 0
-            // updateScore()
-            welcomeUser()
-        })
+            currentQuestion = 0;
+            correctScore = 0;
+            wrongScore = 0;
+            // updateScore();
+            welcomeUser();
+        });
 }
 
 function lauchQuiz(){
-    let quizLaunched = document.getElementById("launch-Btn")
+    let quizLaunched = document.getElementById("launch-Btn");
     quizLaunched.addEventListener("click",function(){
         welcomeUser();
     });
 }
 
 function welcomeUser(){
-    let userName = prompt("Hey please enter a user name")
+    let userName = prompt("Hey please enter a user name");
     gameArea.innerHTML = `
         <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
         <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!<p>
@@ -217,29 +216,29 @@ function welcomeUser(){
                 </li>
             </ul>
         `;
-    levelSelection()
+    levelSelection();
 }
 function levelSelection(){
     let buttons = document.getElementsByTagName("button");
-    let levelSelected = ""
+    let levelSelected = "";
     for (let button of buttons) {
       button.addEventListener("click", function() {
         levelSelected = button.id;
         if (levelSelected === "level-1") {
-            displayQuestion(levelSelected)
-            console.log(levelSelected)
+            displayQuestion(levelSelected);
+            console.log(levelSelected);
         } else if (levelSelected === "level-2") {
-            displayQuestion(levelSelected)
-            console.log(levelSelected)
+            displayQuestion(levelSelected);
+            console.log(levelSelected);
         } else if (levelSelected === "level-3") {
-            displayQuestion(levelSelected)
-            console.log(levelSelected)
+            displayQuestion(levelSelected);
+            console.log(levelSelected);
         } else if (levelSelected === "level-4") {
-            displayQuestion(levelSelected)
-            console.log(levelSelected)
+            displayQuestion(levelSelected);
+            console.log(levelSelected);
         } else if (levelSelected === "level-5") {
-            displayQuestion(levelSelected)
-            console.log(levelSelected)
+            displayQuestion(levelSelected);
+            console.log(levelSelected);
         } else {
           console.log("No level selected");
         }
@@ -311,5 +310,5 @@ function displayQuestion(levelSelected) {
 
 
 function consoleTester(){
-    console.log("this logic works")
+    console.log("this logic works");
 }
