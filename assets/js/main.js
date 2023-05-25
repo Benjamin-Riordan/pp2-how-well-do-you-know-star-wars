@@ -153,8 +153,8 @@ const levels = [
 
   let currentQuestion = 0
   let currentlevel = 0
-  let correctScore = "0"
-  let wrongScore = "0"
+  let correctScore = 0
+  let wrongScore = 0
   let userName =""
   let gameArea = document.getElementById("game-area")
 
@@ -162,10 +162,6 @@ const levels = [
 document.addEventListener("DOMContentLoaded",function(){
     lauchQuiz()
 })
-
-function consoleTester(){
-    console.log("this logic works")
-}
 
 function updateScore(){
     let correctScoreMarker = document.getElementById("Cscores");
@@ -176,23 +172,22 @@ function updateScore(){
 
 function endGame(){
     gameArea.innerHTML =`
-    <h1 id="new-header">Game Over</h1>
-    <p class="game-info">Congratulations, ${userName}!</p>
-    <p class="game-info">You have completed all the questions.</p>
-    <p class="game-info">Final Score:</p>
-    <div id="score-keeper">Correct <span id="Cscores">${correctScore}</span> Wrong <span id="Wscore">${wrongScore}</span></div>
-    <button class="Btn-style" id="try-again">Try Again</button>
-    `;
+        <h1 id="new-header">Game Over</h1>
+        <p class="game-info">Congratulations, ${userName}!</p>
+        <p class="game-info">You have completed all the questions.</p>
+        <p class="game-info">Final Score:</p>
+        <div id="score-keeper">Correct <span id="Cscores">${correctScore}</span> Wrong <span id="Wscore">${wrongScore}</span></div>
+        <button class="Btn-style" id="try-again">Try Again</button>
+        `;
 
     let tryAgainButton = document.getElementById("try-again")
-    tryAgainButton.addEventListener("click",function(){
-        currentQuestion = 0
-        correctScore = 0
-        wrongScore = 0
-        // updateScore()
-        welcomeUser()
-    })
-
+        tryAgainButton.addEventListener("click",function(){
+            currentQuestion = 0
+            correctScore = 0
+            wrongScore = 0
+            // updateScore()
+            welcomeUser()
+        })
 }
 
 function lauchQuiz(){
@@ -205,23 +200,26 @@ function lauchQuiz(){
 function welcomeUser(){
     let userName = prompt("Hey please enter a user name")
     gameArea.innerHTML = `
-    <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
-    <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!<p>
-    <p class ="game-info"> Are you ready to take the quiz? </p>
-    <p class ="game-info"> please pick your level:</p>
-        <ul id =level-selction">
-            <li><button class ="Btn-style" id ="level-1" >Level 1(You cant get these wrong)</button>
-            </li>
-            <li><button class ="Btn-style" id ="level-2" >Level 2(You might get one wrong)</button>
-            </li>
-            <li><button class ="Btn-style" id ="level-3" >Level 3(ok you will get one wrong)</button>
-            </li>
-            <li><button class ="Btn-style" id ="level-4" >Level 4(ill be fair this is very diffcult)</button>
-            </li>
-            <li><button class ="Btn-style" id ="level-5" >Level 5(you need to be a jedi master to get these right)</button>
-            </li>
-        </ul>
-    `
+        <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
+        <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!<p>
+        <p class ="game-info"> Are you ready to take the quiz? </p>
+        <p class ="game-info"> please pick your level:</p>
+            <ul id =level-selction">
+                <li><button class ="Btn-style" id ="level-1" >Level 1(You cant get these wrong)</button>
+                </li>
+                <li><button class ="Btn-style" id ="level-2" >Level 2(You might get one wrong)</button>
+                </li>
+                <li><button class ="Btn-style" id ="level-3" >Level 3(ok you will get one wrong)</button>
+                </li>
+                <li><button class ="Btn-style" id ="level-4" >Level 4(ill be fair this is very diffcult)</button>
+                </li>
+                <li><button class ="Btn-style" id ="level-5" >Level 5(you need to be a jedi master to get these right)</button>
+                </li>
+            </ul>
+        `;
+    levelSelection()
+}
+function levelSelection(){
     let buttons = document.getElementsByTagName("button");
     let levelSelected = ""
     for (let button of buttons) {
@@ -245,65 +243,73 @@ function welcomeUser(){
         } else {
           console.log("No level selected");
         }
-      });
+    });
+}}
+
+function displayQuestion(levelSelected) {
+    console.log(levelSelected);
+      
+        let levelStart = -1;
+      
+        for (let i = 0; i < levels.length; i++) {
+          if (levels[i].difficulty === levelSelected) {
+            levelStart = i;
+            console.log(levels[i]);
+            break;
+          }
+        }
+      
+        if (levelStart !== -1 && levels[levelStart].questions.length > currentQuestion) {
+          const currentLevel = levels[levelStart];
+          const currentQuestionToAsk = currentLevel.questions[currentQuestion];
+          const question = currentQuestionToAsk.question;
+          const answerOptions = currentQuestionToAsk.options;
+          const answer = currentQuestionToAsk.answer;
+      
+          gameArea.innerHTML = `
+            <h1 id="new-header">Best of luck with the questions!</h1>
+            <h2>${question}</h2>
+            <ul>
+              <li><button class="answer">${answerOptions[0]}</button></li>
+              <li><button class="answer">${answerOptions[1]}</button></li>
+              <li><button class="answer">${answerOptions[2]}</button></li>
+              <li><button class="answer">${answerOptions[3]}</button></li>
+            </ul>
+      
+            <div id="score-keeper">
+              Correct: <span id="Cscores">0</span>
+              Wrong: <span id="Wscores">0</span>
+            </div>`;
+          
+          let answerButtons = document.getElementsByClassName("answer");
+      
+          for (let i = 0; i < answerButtons.length; i++) {
+            answerButtons[i].addEventListener("click", function() {
+              let selectedAnswer = answerButtons[i].textContent;
+      
+              if (selectedAnswer === answer) {
+                alert("Well done, my young Padawan learner!");
+                correctScore++;
+                updateScore();
+                currentQuestion++;
+              } else {
+                alert("Sorry, that's wrong. Are you turning to the dark side?");
+                wrongScore++;
+                updateScore();
+                currentQuestion++;
+              }
+      
+              if (currentQuestion < currentLevel.questions.length) {
+                displayQuestion(levelSelected);
+              } else {
+                endGame();
+              }
+            });
+        }
     }
 }
 
-function displayQuestion(levelSelected){
-   
-  console.log(levelSelected)
-  let LevelStart = -1
-  for (let i = 0;i < levels.length; i ++){
-    if(levels[i].difficulty === levelSelected){
-      LevelStart = i
-      console.log(levels[i])
-      break
-    }
-  }
 
-  if(LevelStart !== -1 && levels[LevelStart].questions.length > currentQuestion){
-    const currentlevel = levels[LevelStart]
-    const currentQuestionToAsk = currentlevel.questions[currentQuestion]
-    const question = currentQuestionToAsk.question
-    const answerOptions = currentQuestionToAsk.options
-    const answer = currentQuestionToAsk.answer
-  
-  gameArea.innerHTML= `
-  <h1 id="new-header"> Best of luck with the questions! </h1>
-  <h2>${question}</h2>
-    <ul>
-        <li><button class="answer">${answerOptions[0]}</button></li>
-        <li><button class="answer">${answerOptions[1]}</button></li>
-        <li><button class="answer">${answerOptions[2]}</button></li>
-        <li><button class="answer">${answerOptions[3]}</button></li>
-    </ul>
-
-    <div id="score=keeper"> Correct<span id="Cscores">0</span> Wrong<span id="Wscores">0</span>
-    </div>
-  `
-  ;
-  let answerButtons = document.getElementsByClassName("answer");
-  for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].addEventListener("click", function() {
-      let selectedAnswer = answerButtons[i].textContent;
-      if (selectedAnswer === answer) {
-        alert("Well done, my young Padawan learner!");
-        correctScore++;
-        updateScore();
-        currentQuestion++;
-      } else {
-        alert("Sorry, that's wrong. Are you turning to the dark side?");
-        wrongScore++;
-        updateScore();
-        currentQuestion++;
-      };
-    if (currentQuestion < currentlevel.questions.length){
-    displayQuestion(levelSelected);
-    }else {
-    endGame();
-  }
-}
-);
-}
-}
+function consoleTester(){
+    console.log("this logic works")
 }
