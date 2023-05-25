@@ -172,7 +172,6 @@ function lauchQuiz(){
 }
 
 function welcomeUser(){
-    // let gameArea = document.getElementById("game-area")
     let userName = prompt("Hey please enter a user name")
     gameArea.innerHTML = `
     <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
@@ -240,13 +239,17 @@ function displayQuestion(levelSelected){
     const answer = currentQuestionToAsk.answer
   
   gameArea.innerHTML= `
-  <h1>${question}placeholder</h1>
+  <h1 id="new-header"> Best of luck with the questions! </h1>
+  <h2>${question}</h2>
     <ul>
         <li><button class="answer">${answerOptions[0]}</button></li>
         <li><button class="answer">${answerOptions[1]}</button></li>
         <li><button class="answer">${answerOptions[2]}</button></li>
         <li><button class="answer">${answerOptions[3]}</button></li>
     </ul>
+
+    <div id="score=keeper"> Correct<span id="Cscores">0</span> Wrong<span id="Wscore">0</span>
+    </div>
   `
   ;
   let answerButtons = document.getElementsByClassName("answer");
@@ -266,4 +269,4 @@ function displayQuestion(levelSelected){
   );
   }
 }
-}displayQuestion(levelSelected);
+}displayQuestion();
