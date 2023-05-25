@@ -162,13 +162,6 @@ document.addEventListener("DOMContentLoaded",function(){
     lauchQuiz();
 });
 
-function updateScore(){
-    let correctScoreMarker = document.getElementById("Cscores");
-    let wrongScoreMarker = document.getElementById("Wscores");
-    correctScoreMarker.textContent = correctScore;
-    wrongScoreMarker.textContent = wrongScore;
-}
-
 function endGame(){
     gameArea.innerHTML =`
         <h1 id="new-header">Game Over</h1>
@@ -184,7 +177,6 @@ function endGame(){
             currentQuestion = 0;
             correctScore = 0;
             wrongScore = 0;
-            // updateScore();
             welcomeUser();
         });
 }
@@ -276,8 +268,8 @@ function displayQuestion(levelSelected) {
             </ul>
       
             <div id="score-keeper">
-              Correct: <span id="Cscores">0</span>
-              Wrong: <span id="Wscores">0</span>
+              Correct: <span id="Cscores">${correctScore}</span>
+              Wrong: <span id="Wscores">${wrongScore}</span>
             </div>`;
           
           let answerButtons = document.getElementsByClassName("answer");
@@ -289,15 +281,13 @@ function displayQuestion(levelSelected) {
               if (selectedAnswer === answer) {
                 alert("Well done, my young Padawan learner!");
                 correctScore++;
-                updateScore();
-                currentQuestion++;
               } else {
                 alert("Sorry, that's wrong. Are you turning to the dark side?");
                 wrongScore++;
-                updateScore();
-                currentQuestion++;
               }
-      
+
+              currentQuestion++;
+  
               if (currentQuestion < currentLevel.questions.length) {
                 displayQuestion(levelSelected);
               } else {
