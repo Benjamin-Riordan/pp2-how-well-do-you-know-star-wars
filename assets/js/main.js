@@ -153,6 +153,9 @@ const levels = [
 
   let currentQuestion = 0
   let currentlevel = 0
+  let correctScore = "0"
+  let wrongScore = "0"
+  let userName =""
   let gameArea = document.getElementById("game-area")
 
 
@@ -162,6 +165,34 @@ document.addEventListener("DOMContentLoaded",function(){
 
 function consoleTester(){
     console.log("this logic works")
+}
+
+function updateScore(){
+    let correctScoreMarker = document.getElementById("Cscores");
+    let wrongScoreMarker = document.getElementById("Wscores");
+    correctScoreMarker.textContent = correctScore
+    wrongScoreMarker.textContent = wrongScore
+}
+
+function endGame(){
+    gameArea.innerHTML =`
+    <h1 id="new-header">Game Over</h1>
+    <p class="game-info">Congratulations, ${userName}!</p>
+    <p class="game-info">You have completed all the questions.</p>
+    <p class="game-info">Final Score:</p>
+    <div id="score-keeper">Correct <span id="Cscores">${correctScore}</span> Wrong <span id="Wscore">${wrongScore}</span></div>
+    <button class="Btn-style" id="try-again">Try Again</button>
+    `;
+
+    let tryAgainButton = document.getElementById("try-again")
+    tryAgainButton.addEventListener("click",function(){
+        currentQuestion = 0
+        correctScore = 0
+        wrongScore = 0
+        // updateScore()
+        welcomeUser()
+    })
+
 }
 
 function lauchQuiz(){
@@ -217,10 +248,9 @@ function welcomeUser(){
       });
     }
 }
-function updateScore(){
-}
 
 function displayQuestion(levelSelected){
+   
   console.log(levelSelected)
   let LevelStart = -1
   for (let i = 0;i < levels.length; i ++){
@@ -248,7 +278,7 @@ function displayQuestion(levelSelected){
         <li><button class="answer">${answerOptions[3]}</button></li>
     </ul>
 
-    <div id="score=keeper"> Correct<span id="Cscores">0</span> Wrong<span id="Wscore">0</span>
+    <div id="score=keeper"> Correct<span id="Cscores">0</span> Wrong<span id="Wscores">0</span>
     </div>
   `
   ;
@@ -259,14 +289,21 @@ function displayQuestion(levelSelected){
       if (selectedAnswer === answer) {
         alert("Well done, my young Padawan learner!");
         correctScore++;
+        updateScore();
         currentQuestion++;
       } else {
         alert("Sorry, that's wrong. Are you turning to the dark side?");
         wrongScore++;
+        updateScore();
         currentQuestion++;
-      }
-    }
-  );
+      };
+    if (currentQuestion < currentlevel.questions.length){
+    displayQuestion(levelSelected);
+    }else {
+    endGame();
   }
 }
-}displayQuestion();
+);
+}
+}
+}
