@@ -192,7 +192,9 @@ function welcomeUser(){
     let userName = prompt("Hey please enter a user name");
     gameArea.innerHTML = `
         <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
-        <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!<p>
+        <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!</p>
+        
+        
         <p class ="game-info"> Are you ready to take the quiz? </p>
         <p class ="game-info"> please pick your level:</p>
             <ul id =level-selction">
