@@ -3,7 +3,8 @@
  * I hope you enjoy
  */
 
-// this declairs all the questions and the levels and the answers 
+console.log(" Hello And welcome to my PP2 project for my ci portfolio.this is my submmison for pp2I hope you enjoy")
+ 
 const levels = [
     {
       difficulty: "level-1",
