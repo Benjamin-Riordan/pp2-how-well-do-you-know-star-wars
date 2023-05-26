@@ -4,11 +4,12 @@
     border: 0;
     margin: 0;
     box-sizing: border-box;
-    color: yellow; 
+    color: yellow;  
     font-family:'Trispace', sans-serif;
 }
 body {
-    background: url("assets/bgimages/starry-night-skyv2.jpg")
+    background-color: black;
+    background-image:url(/assets/bgimages/starry-night-skyv2.jpg);
   }
 #game-area{
     width: 100%;
@@ -94,3 +95,4 @@ li{
 #score-keeper{
     padding:50px;
 }
+
