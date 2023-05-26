@@ -8,7 +8,7 @@
     font-family:'Trispace', sans-serif;
 }
 body {
-    background: url("/assets/bgimages/starry-night-skyv2.jpg")
+    background: url("assets/bgimages/starry-night-skyv2.jpg")
   }
 #game-area{
     width: 100%;
