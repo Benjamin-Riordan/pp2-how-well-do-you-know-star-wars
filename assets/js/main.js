@@ -1,3 +1,9 @@
+/** Hello And welcome to my PP2 project for my ci portfolio.
+ * this is my submmison for pp2
+ * I hope you enjoy
+ */
+
+// this declairs all the questions and the levels and the answers 
 const levels = [
     {
       difficulty: "level-1",
@@ -150,13 +156,18 @@ const levels = [
       ]
     }
   ];
-
+// gobal scoped variables to be accesed by multiple fucntions 
   let currentQuestion = 0;
   let correctScore = 0;
   let wrongScore = 0;
   let userName =""
   let gameArea = document.getElementById("game-area");
 
+  /** the welcome user fucntion .
+   * when the user loads the quiz this fucntion will fire and propmt the user to enter a name
+   * it will also check if the user has enterd a a name or not and if not then loops the prompt until the user does enter a name
+   * then itr will display the game area using inner html and some template literals
+   */
   function welcomeUser(){
     userName = prompt("Hey please enter a user name");
     while(!userName){
@@ -185,6 +196,7 @@ const levels = [
             </ul>
         `;
     levelSelection();
+    // this will return the user name back to the gobal variable to be called later by endgame()
 return userName
     }
 
