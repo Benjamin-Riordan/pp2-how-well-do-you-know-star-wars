@@ -154,12 +154,16 @@ const levels = [
   let currentQuestion = 0;
   let correctScore = 0;
   let wrongScore = 0;
-  let userName ="";
+  let userName =""
   let gameArea = document.getElementById("game-area");
 
   function welcomeUser(){
-    let userName = prompt("Hey please enter a user name");
-    if(user)
+    userName = prompt("Hey please enter a user name");
+    while(!userName){
+        alert("You didn't enter a name. To be considered a Jedi, enter a name, you must.");
+        userName = prompt("Ask again I will not, young padawan.");
+      }
+    
     gameArea.innerHTML = `
         <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
         <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!</p>
@@ -181,7 +185,8 @@ const levels = [
             </ul>
         `;
     levelSelection();
-}
+return userName
+    }
 
 function levelSelection(){
     let buttons = document.getElementsByTagName("button");
@@ -272,7 +277,7 @@ function displayQuestion(levelSelected) {
   function endGame(){
     gameArea.innerHTML =`
         <h1 id="new-header">Game Over</h1>
-        <p class="game-info">Congratulations, ${userName}!</p>
+        <p class="game-info">Congratulations, ${userName} !</p>
         <p class="game-info">You have completed all the questions.</p>
         <p class="game-info">Final Score:</p>
         <div id="score-keeper">Correct <span id="Cscores">${correctScore}</span> Wrong <span id="Wscore">${wrongScore}</span></div>
