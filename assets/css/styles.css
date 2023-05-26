@@ -7,21 +7,16 @@
     color: yellow;  
     font-family:'Trispace', sans-serif;
 }
-body{
-    background-image: url(../bg-images/starry-night-skyv2.jpg);
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black;   
-}
+body {
+    background: url(/assets/bgimages/starry-night-skyv2.jpg)
+  }
 #game-area{
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 175px auto;
+    margin: 250px auto;
 }
 
 .Btn-style{
@@ -30,6 +25,10 @@ body{
     height: 100px;
     background: black;
     color: yellow;
+}
+
+.Btn-style:hover{
+    color: white;
 }
 
 #header{
@@ -49,6 +48,12 @@ body{
     font-size: 40px;
     padding: 0 20px;
     margin: 0 20px;
+    background: black;
+    border: 2px solid yellow;
+}
+
+#launch-Btn:hover{
+    color: white;
 }
 
 #new-header{
@@ -84,4 +89,8 @@ ul{
 li{
     padding:30px;
     list-style-type:none;
+}
+
+#score-keeper{
+    padding:50px;
 }

@@ -157,39 +157,9 @@ const levels = [
   let userName ="";
   let gameArea = document.getElementById("game-area");
 
-
-document.addEventListener("DOMContentLoaded",function(){
-    lauchQuiz();
-});
-
-function endGame(){
-    gameArea.innerHTML =`
-        <h1 id="new-header">Game Over</h1>
-        <p class="game-info">Congratulations, ${userName}!</p>
-        <p class="game-info">You have completed all the questions.</p>
-        <p class="game-info">Final Score:</p>
-        <div id="score-keeper">Correct <span id="Cscores">${correctScore}</span> Wrong <span id="Wscore">${wrongScore}</span></div>
-        <button class="Btn-style" id="try-again">Try Again</button>
-        `;
-
-    let tryAgainButton = document.getElementById("try-again");
-        tryAgainButton.addEventListener("click",function(){
-            currentQuestion = 0;
-            correctScore = 0;
-            wrongScore = 0;
-            welcomeUser();
-        });
-}
-
-function lauchQuiz(){
-    let quizLaunched = document.getElementById("launch-Btn");
-    quizLaunched.addEventListener("click",function(){
-        welcomeUser();
-    });
-}
-
-function welcomeUser(){
+  function welcomeUser(){
     let userName = prompt("Hey please enter a user name");
+    if(user)
     gameArea.innerHTML = `
         <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
         <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!</p>
@@ -212,6 +182,7 @@ function welcomeUser(){
         `;
     levelSelection();
 }
+
 function levelSelection(){
     let buttons = document.getElementsByTagName("button");
     let levelSelected = "";
@@ -220,34 +191,26 @@ function levelSelection(){
         levelSelected = button.id;
         if (levelSelected === "level-1") {
             displayQuestion(levelSelected);
-            console.log(levelSelected);
         } else if (levelSelected === "level-2") {
             displayQuestion(levelSelected);
-            console.log(levelSelected);
         } else if (levelSelected === "level-3") {
             displayQuestion(levelSelected);
-            console.log(levelSelected);
         } else if (levelSelected === "level-4") {
             displayQuestion(levelSelected);
-            console.log(levelSelected);
         } else if (levelSelected === "level-5") {
             displayQuestion(levelSelected);
-            console.log(levelSelected);
         } else {
-          console.log("No level selected");
+          displayQuestion(levelSelected)
         }
     });
 }}
 
 function displayQuestion(levelSelected) {
-    console.log(levelSelected);
-      
-        let levelStart = -1;
+    let levelStart = -1;
       
         for (let i = 0; i < levels.length; i++) {
           if (levels[i].difficulty === levelSelected) {
             levelStart = i;
-            console.log(levels[i]);
             break;
           }
         }
@@ -263,16 +226,16 @@ function displayQuestion(levelSelected) {
             <h1 id="new-header">Best of luck with the questions!</h1>
             <h2>${question}</h2>
             <ul>
-              <li><button class="answer">${answerOptions[0]}</button></li>
-              <li><button class="answer">${answerOptions[1]}</button></li>
-              <li><button class="answer">${answerOptions[2]}</button></li>
-              <li><button class="answer">${answerOptions[3]}</button></li>
+              <li><button class="answer Btn-style">${answerOptions[0]}</button></li>
+              <li><button class="answer Btn-style">${answerOptions[1]}</button></li>
+              <li><button class="answer Btn-style">${answerOptions[2]}</button></li>
+              <li><button class="answer Btn-style">${answerOptions[3]}</button></li>
             </ul>
       
-            <div id="score-keeper">
+            <p class="game-info">
               Correct: <span id="Cscores">${correctScore}</span>
               Wrong: <span id="Wscores">${wrongScore}</span>
-            </div>`;
+            </p>`;
           
           let answerButtons = document.getElementsByClassName("answer");
       
@@ -300,7 +263,31 @@ function displayQuestion(levelSelected) {
     }
 }
 
-
-function consoleTester(){
-    console.log("this logic works");
+  function lauchQuiz(){
+    let quizLaunched = document.getElementById("launch-Btn");
+    quizLaunched.addEventListener("click",function(){
+        welcomeUser();
+    });
 }
+  function endGame(){
+    gameArea.innerHTML =`
+        <h1 id="new-header">Game Over</h1>
+        <p class="game-info">Congratulations, ${userName}!</p>
+        <p class="game-info">You have completed all the questions.</p>
+        <p class="game-info">Final Score:</p>
+        <div id="score-keeper">Correct <span id="Cscores">${correctScore}</span> Wrong <span id="Wscore">${wrongScore}</span></div>
+        <button class="Btn-style" id="try-again">Try Again</button>
+        `;
+
+    let tryAgainButton = document.getElementById("try-again");
+        tryAgainButton.addEventListener("click",function(){
+            currentQuestion = 0;
+            correctScore = 0;
+            wrongScore = 0;
+            welcomeUser();
+        });
+}
+document.addEventListener("DOMContentLoaded",function(){
+    lauchQuiz();
+});
+
