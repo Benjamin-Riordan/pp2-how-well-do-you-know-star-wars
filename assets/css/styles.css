@@ -9,7 +9,7 @@
 }
 body {
     background-color: black;
-    background-image:url(/assets/bgimages/starry-night-skyv2.jpg);
+    background-image:url("../bgimages/starry-night-skyv2.jpg");
   }
 #game-area{
     width: 100%;
