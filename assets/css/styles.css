@@ -9,7 +9,11 @@
 }
 body {
     background-color: black;
+<<<<<<< HEAD
     background-image: url("assets/bgimages/starry-night-skyv2.jpg");
+=======
+    background-image:url("../bgimages/starry-night-skyv2.jpg");
+>>>>>>> refs/remotes/origin/main
   }
 #game-area{
     width: 100%;
@@ -96,3 +100,11 @@ li{
     padding:50px;
 }
 
+@media screen and (max-width:1000px) {
+
+#header{
+    font-size:50px;
+    text-align:center
+}
+    
+}
