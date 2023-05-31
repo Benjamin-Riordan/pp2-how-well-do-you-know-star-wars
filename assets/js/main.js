@@ -216,11 +216,17 @@ return userName
  * When a button is clicked, it retrieves the id of the button and calls the displayQuestion function with the selected level.
  */
 function levelSelection(){
+    // Retrieve all the buttons on the page
     let buttons = document.getElementsByTagName("button");
+    // Variable to store the selected level
     let levelSelected = "";
+    // Loop through each button
     for (let button of buttons) {
+        // Add event listener to each button
       button.addEventListener("click", function() {
+        // Retrieve the id of the clicked button
         levelSelected = button.id;
+         // Based on the selected level, call the displayQuestion function with the selected level
         if (levelSelected === "level-1") {
             displayQuestion(levelSelected);
         } else if (levelSelected === "level-2") {
