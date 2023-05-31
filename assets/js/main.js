@@ -243,9 +243,14 @@ function levelSelection(){
     });
 }}
 
+/**
+ * Displays the question based on the selected level.
+ */
+
 function displayQuestion(levelSelected) {
     let levelStart = -1;
       
+        // Find the index of the selected level in the levels arra
         for (let i = 0; i < levels.length; i++) {
           if (levels[i].difficulty === levelSelected) {
             levelStart = i;
@@ -253,6 +258,7 @@ function displayQuestion(levelSelected) {
           }
         }
       
+        // If the level is found and there are questions remaining
         if (levelStart !== -1 && levels[levelStart].questions.length > currentQuestion) {
           const currentLevel = levels[levelStart];
           const currentQuestionToAsk = currentLevel.questions[currentQuestion];
