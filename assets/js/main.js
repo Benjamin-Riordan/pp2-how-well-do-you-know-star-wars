@@ -166,11 +166,12 @@ const levels = [
   let userName =""
   let gameArea = document.getElementById("game-area");
 
-  /** the welcome user fucntion .
-   * when the user loads the quiz this fucntion will fire and propmt the user to enter a name
-   * it will also check if the user has enterd a a name or not and if not then loops the prompt until the user does enter a name
-   * then itr will display the game area using inner html and some template literals
-   */
+ /**
+ * The welcomeUser function.
+ * When the user loads the quiz, this function will be fired and prompt the user to enter a name.
+ * It will also check if the user has entered a name or not, and if not, then loop the prompt until the user does enter a name.
+ * Then, it will display the game area using innerHTML and some template literals.
+ */
   function welcomeUser(){
     userName = prompt("Hey please enter a user name");
     while(!userName){
