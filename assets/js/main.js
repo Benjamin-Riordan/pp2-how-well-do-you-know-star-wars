@@ -1,10 +1,12 @@
-/** Hello And welcome to my PP2 project for my ci portfolio.
- * this is my submmison for pp2
+/**
+ * Hello And welcome to my PP2 project for my ci portfolio.
+ * this is my submission for pp2
  * I hope you enjoy
  */
 
 console.log(" Hello And welcome to my PP2 project for my ci portfolio.this is my submmison for pp2 I hope you enjoy")
  
+// Array containing levels and their respective questions
 const levels = [
     {
       difficulty: "level-1",
@@ -201,6 +203,10 @@ const levels = [
 return userName
     }
 
+
+/**
+ * this is the main level section fucntion 
+ */
 function levelSelection(){
     let buttons = document.getElementsByTagName("button");
     let levelSelected = "";
