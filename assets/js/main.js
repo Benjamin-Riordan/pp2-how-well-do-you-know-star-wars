@@ -321,6 +321,9 @@ function displayQuestion(levelSelected) {
         welcomeUser();
     });
 }
+/**
+ * Ends the game and displays the final score.
+ */
   function endGame(){
     gameArea.innerHTML =`
         <h1 id="new-header">Game Over</h1>
@@ -332,7 +335,7 @@ function displayQuestion(levelSelected) {
         `;
     jediOrSith()
 
-
+    // Reset the current question, correct score, and wrong score
     let tryAgainButton = document.getElementById("try-again");
         tryAgainButton.addEventListener("click",function(){
             currentQuestion = 0;
@@ -341,10 +344,14 @@ function displayQuestion(levelSelected) {
             welcomeUser();
         });
 }
+// Event listener for when the DOM content is loaded
 document.addEventListener("DOMContentLoaded",function(){
     lauchQuiz();
 });
 
+/**
+ * Displays a message indicating whether the user is a Jedi or Sith based on their scores.
+ */
 function jediOrSith(){
     let isUserjediOrSith = document.createElement("div");
     isUserjediOrSith.setAttribute("id", "scorekeeper");
