@@ -173,12 +173,17 @@ const levels = [
  * Then, it will display the game area using innerHTML and some template literals.
  */
   function welcomeUser(){
+    // When the user clicks on "Click Me", they will get a prompt to enter a name which will be stored in userName
     userName = prompt("Hey please enter a user name");
+    // Check to see if the user has entered a username by checking the truthiness or falsiness of the input 
     while(!userName){
+         // If the username is falsy (empty or null), prompt the user again until a valid username is entered
         alert("You didn't enter a name. To be considered a Jedi, enter a name, you must.");
         userName = prompt("Ask again I will not, young padawan.");
       }
-    
+    /**
+     * This creats the nect page of the quiz taking the user name input
+     */
     gameArea.innerHTML = `
         <header id="new-header"> Hello ${userName} and welcome to the Star Wars quiz!</header>
         <p class ="game-info">This quiz will test your knowlage, it has 5 diffculty levels and there are some very hard questions!</p>
@@ -206,7 +211,9 @@ return userName
 
 
 /**
- * this is the main level section fucntion 
+ * The levelSelection function.
+ * It handles the selection of quiz levels by adding event listeners to the level selection buttons.
+ * When a button is clicked, it retrieves the id of the button and calls the displayQuestion function with the selected level.
  */
 function levelSelection(){
     let buttons = document.getElementsByTagName("button");
