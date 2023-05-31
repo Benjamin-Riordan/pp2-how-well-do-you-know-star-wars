@@ -296,6 +296,8 @@ function displayQuestion(levelSelected) {
         <div id="score-keeper">Correct <span id="Cscores">${correctScore}</span> Wrong <span id="Wscore">${wrongScore}</span></div>
         <button class="Btn-style" id="try-again">Try Again</button>
         `;
+    jediOrSith()
+
 
     let tryAgainButton = document.getElementById("try-again");
         tryAgainButton.addEventListener("click",function(){
@@ -308,4 +310,19 @@ function displayQuestion(levelSelected) {
 document.addEventListener("DOMContentLoaded",function(){
     lauchQuiz();
 });
+
+function jediOrSith(){
+    let isUserjediOrSith = document.createElement("div");
+    isUserjediOrSith.setAttribute("id", "scorekeeper");
+    let button = document.getElementById("try-again")
+    gameArea.insertBefore(isUserjediOrSith, button)
+
+    if(correctScore < wrongScore){
+        isUserjediOrSith.innerText= "THE FORCE, KNOW YOU DO NOT"
+    }else if(correctScore = wrongScore){
+        isUserjediOrSith.innerText ="MAYBE PADAWAN, YOU WILL MAKE"
+    }else{correctScore > wrongScore}{
+        isUserjediOrSith.innerText="JEDI MASTER, WE WILL GRANT YOU!"
+    }
+}
 
