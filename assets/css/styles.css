@@ -1,138 +1,156 @@
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@800&display=swap');
-*{
-    padding: 0;
-    border: 0;
-    margin: 0;
-    box-sizing: border-box;
-    color: yellow;  
-    font-family:'Trispace', sans-serif;
+
+/* Global Styles */
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: yellow;
+  font-family: 'Trispace', sans-serif;
 }
+
+/* Body Styles */
 body {
-    background-color: black;
-    background-image:url("../bgimages/starry-night-skyv2.jpg");
-  }
-#game-area{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: 125px auto;
-    text-align: center;
-}
-button:hover{
-    cursor: pointer;
+  background-color: black;
+  background-image: url("../bgimages/starry-night-skyv2.jpg");
 }
 
-.Btn-style{
-    font-size: 30px;
-    width: 1000px;
-    height: 100px;
-    background: black;
-    color: yellow;
+/* Game Area Styles */
+#game-area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 125px auto;
+  text-align: center;
 }
 
-.Btn-style:hover{
-    color: white;
+/* Button Styles */
+button:hover {
+  cursor: pointer;
 }
 
-#header{
-    font-size: 75px;
-    padding: 50px 0;
+.Btn-style {
+  font-size: 30px;
+  width: 1000px;
+  height: 100px;
+  background: black;
+  color: yellow;
 }
 
-h2{
-    text-align: center;
+.Btn-style:hover {
+  color: white;
 }
 
-
-#srt-game-text{
-    font-size: 40px;
-    padding: 50px 0;
-    text-align: center;
+/* Header Styles */
+#header {
+  font-size: 75px;
+  padding: 50px 0;
 }
 
-#launch-Btn{
-    font-size: 40px;
-    padding: 0 20px;
-    margin: 0 20px;
-    background: black;
-    border: 2px solid yellow;
+/* Heading Styles */
+h2 {
+  text-align: center;
 }
 
-#launch-Btn:hover{
-    color: white;
+#srt-game-text {
+  font-size: 40px;
+  padding: 50px 0;
+  text-align: center;
 }
 
-#new-header{
-    font-size: 50px;
-    padding: 50px 50px;
-    text-align: center;
+/* Launch Button Styles */
+#launch-Btn {
+  font-size: 40px;
+  padding: 0 20px;
+  margin: 0 20px;
+  background: black;
+  border: 2px solid yellow;
 }
 
-.game-info{
-    font-size: 25px;
-    padding: 30px 30px;
-    text-align: center;
+#launch-Btn:hover {
+  color: white;
 }
 
-#level-selction{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: stretch;
+/* New Header Styles */
+#new-header {
+  font-size: 50px;
+  padding: 50px 50px;
+  text-align: center;
 }
 
+/* Game Info Styles */
+.game-info {
+  font-size: 25px;
+  padding: 30px 30px;
+  text-align: center;
+}
+
+/* Level Selection Styles */
+#level-selction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: stretch;
+}
+
+/* Username Styles */
 #username {
-    width: 50%;
+  width: 50%;
+  text-align: center;
+}
+
+/* List Styles */
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  padding: 30px;
+  list-style-type: none;
+}
+
+/* Score Keeper Styles */
+#score-keeper {
+  padding: 50px;
+  font-size: 25px;
+}
+
+/* Jedi or Sith Styles */
+#is-jedi-or-not {
+  padding: 25px;
+  text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  /* Header Styles */
+  #header {
+    font-size: 50px;
     text-align: center;
-}
+  }
 
-ul{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-li{
-    padding:30px;
-    list-style-type:none;
-}
-
-#score-keeper{
-    padding:50px;
-    font-size: 25px;
-
-}
-
-#is-jedi-or-not{
-    padding: 25px;
-    text-align: center;
-}
-
-@media screen and (max-width:1000px) {
-
-#header{
-    font-size:50px;
-    text-align:center
-}
-
-.Btn-style{
+  /* Button Styles */
+  .Btn-style {
     font-size: 20px;
     width: 500px;
     height: 100px;
     background: black;
     color: yellow;
-}
-    
+  }
 }
 
-@media screen and (max-width:500px){
-    .Btn-style{
-        font-size: 20px;
-        width: 250px;
-        height: 50px;
-        background: black;
-        color: yellow;
-    } 
+@media screen and (max-width: 500px) {
+  /* Button Styles */
+  .Btn-style {
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    background: black;
+    color: yellow;
+  }
 }
