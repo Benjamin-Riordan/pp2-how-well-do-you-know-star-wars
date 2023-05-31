@@ -358,11 +358,11 @@ function jediOrSith(){
     let button = document.getElementById("try-again")
     gameArea.insertBefore(isUserjediOrSith, button)
 
-    if(correctScore < wrongScore){
+    if(correctScore > wrongScore){
         isUserjediOrSith.innerText= "THE FORCE, KNOW YOU DO NOT"
     }else if(correctScore = wrongScore){
         isUserjediOrSith.innerText ="MAYBE PADAWAN, YOU WILL MAKE"
-    }else{correctScore > wrongScore}{
+    }else{correctScore < wrongScore}{
         isUserjediOrSith.innerText="JEDI MASTER, WE WILL GRANT YOU!"
     }
 }
