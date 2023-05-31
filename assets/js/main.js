@@ -13,27 +13,27 @@ const levels = [
       questions: [
         {
           question: "Who is Luke Skywalker's father?",
-          options: ["Darth Vader", "Obi-Wan Kenobi", "Yoda", "Han Solo"],
+          options: [ "Obi-Wan Kenobi","Darth Vader", "Yoda", "Han Solo"],
           answer: "Darth Vader"
         },
         {
           question: "What is the name of Han Solo's ship?",
-          options: ["Millennium Falcon", "Star Destroyer", "X-wing", "TIE Fighter"],
+          options: [ "Star Destroyer", "X-wing","Millennium Falcon", "TIE Fighter"],
           answer: "Millennium Falcon"
         },
         {
           question: "Which planet is home to Chewbacca and the Wookiees?",
-          options: ["Kashyyyk", "Tatooine", "Hoth", "Endor"],
+          options: ["Tatooine","Kashyyyk",  "Hoth", "Endor"],
           answer: "Kashyyyk"
         },
         {
           question: "Who is the famous Jedi Master that trained Obi-Wan Kenobi?",
           options: ["Qui-Gon Jinn", "Mace Windu", "Yoda", "Anakin Skywalker"],
-          answer: "Yoda"
+          answer: "Qui-Gon Jinn"
         },
         {
           question: "What is the name of the bounty hunter who captures Han Solo?",
-          options: ["Boba Fett", "Jango Fett", "Cad Bane", "Dengar"],
+          options: ["Jango Fett","Boba Fett",  "Cad Bane", "Dengar"],
           answer: "Boba Fett"
         }
       ]
@@ -92,7 +92,7 @@ const levels = [
           answer: "Ahsoka Tano"
         },
         {
-          question: "Which bounty hunter did Jango Fett request to be the template for the clone army?",
+          question: "Which bounty hunter did tyranus request to be the template for the clone army?",
           options: ["Boba Fett", "Dengar", "Zam Wesell", "Cad Bane"],
           answer: "Boba Fett"
         }
@@ -109,17 +109,17 @@ const levels = [
         {
           question: "What is the name of the ancient Sith homeworld?",
           options: ["Korriban", "Moraband", "Exegol", "Malachor"],
-          answer: "Korriban"
+          answer: "Moraband"
         },
         {
           question: "Who is the mastermind behind the creation of the Death Star?",
           options: ["Galen Erso", "Wilhuff Tarkin", "Orson Krennic", "Darth Sidious"],
-          answer: "Galen Erso"
+          answer: "Wilhuff Tarkin"
         },
         {
-          question: "Which Jedi Master ignited their lightsaber in Attack of the Clones?",
+          question: "Which Jedi Master ignited their lightsaber for the first time in Attack of the Clones?",
           options: ["Mace Windu", "Yoda", "Obi-Wan Kenobi", "Kit Fisto"],
-          answer: "Obi-Wan Kenobi"
+          answer: "Yoda"
         },
         {
           question: "What is the name of the species that Yoda belongs to?",
@@ -265,16 +265,17 @@ function displayQuestion(levelSelected) {
           const question = currentQuestionToAsk.question;
           const answerOptions = currentQuestionToAsk.options;
           const answer = currentQuestionToAsk.answer;
+          const shuffeldAnswersOptions =shuffleArray(answerOptions)
             
           // Display the question and answer options
           gameArea.innerHTML = `
             <h1 id="new-header">Best of luck with the questions!</h1>
             <h2>${question}</h2>
             <ul>
-              <li><button class="answer Btn-style">${answerOptions[0]}</button></li>
-              <li><button class="answer Btn-style">${answerOptions[1]}</button></li>
-              <li><button class="answer Btn-style">${answerOptions[2]}</button></li>
-              <li><button class="answer Btn-style">${answerOptions[3]}</button></li>
+              <li><button class="answer Btn-style">${shuffeldAnswersOptions[0]}</button></li>
+              <li><button class="answer Btn-style">${shuffeldAnswersOptions[1]}</button></li>
+              <li><button class="answer Btn-style">${shuffeldAnswersOptions[2]}</button></li>
+              <li><button class="answer Btn-style">${shuffeldAnswersOptions[3]}</button></li>
             </ul>
       
             <p class="game-info">
@@ -367,3 +368,17 @@ function jediOrSith(){
     }
 }
 
+
+function shuffleArray(array) {
+    // Create a new array with the same elements
+  
+    const newArray = array.slice(); 
+    for (let i = newArray.length - 1; i > 0; i--) {
+        // Generate a random index
+      const j = Math.floor(Math.random() * (i + 1)); 
+      // Swap elements at indices i and j
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+  
+    return newArray;
+  }
