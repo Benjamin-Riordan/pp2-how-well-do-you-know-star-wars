@@ -1,6 +1,6 @@
 /**
  * Hello And welcome to my PP2 project for my ci portfolio.
- * this is my submission for pp2
+ * This is my submission for pp2
  * I hope you enjoy
  */
 
