@@ -19,6 +19,9 @@ body {
     justify-content: center;
     margin: 125px auto;
 }
+button:hover{
+    cursor: pointer;
+}
 
 .Btn-style{
     font-size: 30px;
