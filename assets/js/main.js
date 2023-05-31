@@ -312,7 +312,9 @@ function displayQuestion(levelSelected) {
         }
     }
 }
-
+/**
+ * Launches the quiz when the "Launch Quiz" button is clicked.
+ */
   function lauchQuiz(){
     let quizLaunched = document.getElementById("launch-Btn");
     quizLaunched.addEventListener("click",function(){
