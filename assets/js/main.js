@@ -265,7 +265,8 @@ function displayQuestion(levelSelected) {
           const question = currentQuestionToAsk.question;
           const answerOptions = currentQuestionToAsk.options;
           const answer = currentQuestionToAsk.answer;
-      
+            
+          // Display the question and answer options
           gameArea.innerHTML = `
             <h1 id="new-header">Best of luck with the questions!</h1>
             <h2>${question}</h2>
@@ -280,13 +281,16 @@ function displayQuestion(levelSelected) {
               Correct: <span id="Cscores">${correctScore}</span>
               Wrong: <span id="Wscores">${wrongScore}</span>
             </p>`;
-          
+
+            // declaring the answer buttons
           let answerButtons = document.getElementsByClassName("answer");
-      
+
+            // Add event listeners to the answer buttons
           for (let i = 0; i < answerButtons.length; i++) {
             answerButtons[i].addEventListener("click", function() {
               let selectedAnswer = answerButtons[i].textContent;
       
+              // Check if the selected answer is correct and update the scores
               if (selectedAnswer === answer) {
                 alert("Well done, my young Padawan learner!");
                 correctScore++;
@@ -297,6 +301,8 @@ function displayQuestion(levelSelected) {
 
               currentQuestion++;
   
+            // If there are more questions in the level, display the next question
+            // Otherwise, end the game
               if (currentQuestion < currentLevel.questions.length) {
                 displayQuestion(levelSelected);
               } else {
