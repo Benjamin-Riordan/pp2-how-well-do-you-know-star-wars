@@ -142,3 +142,12 @@ li{
         color: yellow;
     } 
 }
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    @media(hover: hover) and (pointer: course) and (pointer: fine) {
+        .Btn-style {
+            border: 2px solid red;
+            color: white;
+          }
+    }
+}
