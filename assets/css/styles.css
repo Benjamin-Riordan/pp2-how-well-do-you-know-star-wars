@@ -6,7 +6,7 @@
     box-sizing: border-box;
     color: yellow;  
     font-family:'Trispace', sans-serif;
-    -webkit-appearance: none;
+    
 }
 body {
     background-color: black;
@@ -31,6 +31,7 @@ button:hover{
     height: 100px;
     background: black;
     color: yellow;
+    -webkit-appearance: none;
 }
 
 .Btn-style:hover{
