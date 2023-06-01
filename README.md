@@ -1,9 +1,8 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)!
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 ---
-## A site dedicated to 
 
 
-## You can take a closer look here on the live site here - ![star what?](https://benjamin-riordan.github.io/pp2-how-well-do-you-know-star-wars/) 
+# [STARWARS QUIZ](https://benjamin-riordan.github.io/pp2-how-well-do-you-know-star-wars/) -  A text based quiz of multiple choice , how welll do you know star wars?
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)   ![GitHub top language](https://img.shields.io/github/languages/top/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)
 
@@ -49,21 +48,26 @@ ___
 # USER EXPERIENCE
 
 ## Initial Discussion
-
+I wanted the user to learn about starwars in a quizz format and give funny feedback about the questions 
 
 ## User Stories
 Based on the target audience and their needs, the following user stories were identified:
 
-*
+* The site shouuld have diffrent levels of diffculty to accomadate all star wars fans 
 
-* .
+* The color there should be consitant and fmailiar with star wars fans
 
-* 
+* The user should be able to keep tarck of there score
 
-* 
+* The user should get funny promts and alets about there progres
 
 ## Design
- ### Colour Scheme
+
+The over all desing was simple , I wanted and easily naviagtable page that relied healvy on the content of the page. 
+
+## Colour Scheme
+
+I went with a very simplistic back and white background with a yellow text and a simple font awesome font
 
 
 ## Typography
