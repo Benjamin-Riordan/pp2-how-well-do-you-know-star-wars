@@ -3,9 +3,9 @@
 ## A site dedicated to 
 
 
-## You can take a closer look here on the live site here -
+## You can take a closer look here on the live site here - ![star what?](https://benjamin-riordan.github.io/pp2-how-well-do-you-know-star-wars/) 
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Benjamin-Riordan/PP1_Kawazaki_NINJA?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Benjamin-Riordan/PP1_Kawazaki_NINJA?style=for-the-badge)   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Benjamin-Riordan/PP1_Kawazaki_NINJA?style=for-the-badge)   ![GitHub top language](https://img.shields.io/github/languages/top/Benjamin-Riordan/PP1_Kawazaki_NINJA?style=for-the-badge) ![W3C Validation](https://img.shields.io/w3c-validation/default?style=for-the-badge&targetUrl=https%3A%2F%2Fbenjamin-riordan.github.io%2FPP1_Kawazaki_NINJA%2F)
+![GitHub last commit](https://img.shields.io/github/last-commit/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)   ![GitHub top language](https://img.shields.io/github/languages/top/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![W3C Validation](https://img.shields.io/w3c-validation/default?style=for-the-badge&targetUrl=https%3A%2F%2Fbenjamin-riordan.github.io%2FPP1_Kawazaki_NINJA%2F)
 
 ---
 ---
