@@ -1,3 +1,4 @@
+/* overall styling  */
 @import url('https://fonts.googleapis.com/css2?family=Trispace:wght@800&display=swap');
 *{
     padding: 0;
@@ -8,10 +9,12 @@
     font-family:'Trispace', sans-serif;
     
 }
+/* body styliling */
 body {
     background-color: black;
     background-image:url("../bgimages/starry-night-skyv2.jpg");
   }
+  /* game area styles */
 #game-area{
     width: 100%;
     display: flex;
@@ -21,6 +24,7 @@ body {
     margin: 125px auto;
     text-align: center;
 }
+/* button styles  */
 button:hover{
     cursor: pointer;
 }
@@ -37,7 +41,7 @@ button:hover{
 .Btn-style:hover{
     color: white;
 }
-
+/* h1, h2 and header styling */
 #header{
     font-size: 75px;
     padding: 50px 0;
@@ -47,13 +51,13 @@ h2{
     text-align: center;
 }
 
-
+/* welcome page text */
 #srt-game-text{
     font-size: 40px;
     padding: 50px 0;
     text-align: center;
 }
-
+/* launch button */
 #launch-Btn{
     font-size: 40px;
     padding: 0 20px;
@@ -65,13 +69,13 @@ h2{
 #launch-Btn:hover{
     color: white;
 }
-
+/* new page header */
 #new-header{
     font-size: 50px;
     padding: 50px 50px;
     text-align: center;
 }
-
+/* game info paragraphs */
 .game-info{
     font-size: 25px;
     padding: 30px 30px;
@@ -89,7 +93,7 @@ h2{
     width: 50%;
     text-align: center;
 }
-
+/* answers */
 ul{
     display: flex;
     flex-direction: column;
@@ -100,7 +104,7 @@ li{
     padding:30px;
     list-style-type:none;
 }
-
+/* scores */
 #score-keeper{
     padding:50px;
     font-size: 25px;
@@ -111,7 +115,7 @@ li{
     padding: 25px;
     text-align: center;
 }
-
+/* media quryes */
 @media screen and (max-width:1000px) {
 
 #header{
