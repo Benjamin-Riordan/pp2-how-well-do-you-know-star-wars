@@ -144,7 +144,7 @@ li{
 }
 
 @supports (font: -apple-system-body) and (-webkit-appearance: none) {
-        .Btn-style {
+        .Btn-style:hover {
             color: yellow;
           }
     }
