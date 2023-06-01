@@ -1,11 +1,4 @@
-/**
- * Hello And welcome to my PP2 project for my ci portfolio.
- * This is my submission for pp2
- * I hope you enjoy
- */
 
-console.log(" Hello And welcome to my PP2 project for my ci portfolio.this is my submmison for pp2 I hope you enjoy")
- 
 // Array containing levels and their respective questions
 const levels = [
     {
@@ -160,11 +153,11 @@ const levels = [
     }
   ];
 // gobal scoped variables to be accesed by multiple fucntions 
-  let currentQuestion = 0;
-  let correctScore = 0;
-  let wrongScore = 0;
-  let userName =""
-  let gameArea = document.getElementById("game-area");
+let currentQuestion = 0;
+let correctScore = 0;
+let wrongScore = 0;
+let userName =""
+let gameArea = document.getElementById("game-area");
 
  /**
  * The welcomeUser function.
@@ -172,11 +165,11 @@ const levels = [
  * It will also check if the user has entered a name or not, and if not, then loop the prompt until the user does enter a name.
  * Then, it will display the game area using innerHTML and some template literals.
  */
-  function welcomeUser(){
+function welcomeUser() {
     // When the user clicks on "Click Me", they will get a prompt to enter a name which will be stored in userName
     userName = prompt("Hey please enter a user name");
     // Check to see if the user has entered a username by checking the truthiness or falsiness of the input 
-    while(!userName){
+    while(!userName) {
          // If the username is falsy (empty or null), prompt the user again until a valid username is entered
         alert("You didn't enter a name. To be considered a Jedi, enter a name, you must.");
         userName = prompt("Ask again I will not, young padawan.");
@@ -198,7 +191,7 @@ const levels = [
                 </li>
                 <li><button class ="Btn-style" id ="level-3" >Level 3(ok you will get one wrong)</button>
                 </li>
-                <li><button class ="Btn-style" id ="level-4" >Level 4(ill be fair this is very diffcult)</button>
+                <li><button class ="Btn-style" id ="level-4" >Level 4(I will  be fair this is very diffcult)</button>
                 </li>
                 <li><button class ="Btn-style" id ="level-5" >Level 5(you need to be a jedi master to get these right)</button>
                 </li>
