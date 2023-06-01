@@ -72,11 +72,15 @@ I went with a very simplistic back and white background with a yellow text and a
 
 ## Typography
 
+I used a simply yet effeictive font from front awesome "Trispace" -Being honest i used it beacse it has space in the name
+
 
 ## Imagery
+This site uses onlu one image , and that is a background image, the reason for this was to keep the expericne as text based as possble
 
 
 ## Wireframes
+I created a simple wireframe for the first page layout -since th page is mostly the same it works well ,
 
 
 ## Features
