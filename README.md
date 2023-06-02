@@ -48,7 +48,7 @@ ___
 # USER EXPERIENCE
 
 ## Initial Discussion
-I wanted the user to learn about starwars in a quizz format and give funny feedback about the questions 
+I wanted the user to learn about starwars in a quiz format and give funny feedback about the questions 
 
 ## User Stories
 Based on the target audience and their needs, the following user stories were identified:
