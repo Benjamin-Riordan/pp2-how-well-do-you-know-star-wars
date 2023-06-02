@@ -189,11 +189,11 @@ function welcomeUser() {
                 </li>
                 <li><button class ="Btn-style" id ="level-2" >Level 2(You might get one wrong)</button>
                 </li>
-                <li><button class ="Btn-style" id ="level-3" >Level 3(ok you will get one wrong)</button>
+                <li><button class ="Btn-style" id ="level-3" >Level 3(Ok you will get one wrong)</button>
                 </li>
                 <li><button class ="Btn-style" id ="level-4" >Level 4(I will  be fair this is very diffcult)</button>
                 </li>
-                <li><button class ="Btn-style" id ="level-5" >Level 5(you need to be a jedi master to get these right)</button>
+                <li><button class ="Btn-style" id ="level-5" >Level 5(You need to be a jedi master to get these right)</button>
                 </li>
             </ul>
         `;
