@@ -1,16 +1,15 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 ---
 
+# [STARWARS QUIZ](https://benjamin-riordan.github.io/pp2-how-well-do-you-know-star-wars/) - A text based quiz of multiple choice, how well do you know Star Wars?
 
-# [STARWARS QUIZ](https://benjamin-riordan.github.io/pp2-how-well-do-you-know-star-wars/) -  A text based quiz of multiple choice , how welll do you know star wars?
-
-![GitHub last commit](https://img.shields.io/github/last-commit/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)   ![GitHub top language](https://img.shields.io/github/languages/top/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)
 
 ---
+
 ---
+
 # CONTENTS
-
-
 
 * [USER EXPERIENCE](#USEREXPERIENCE)
     * [Initial Discussion](#Initialdiscussion)
@@ -28,64 +27,46 @@
 	* [Code reviews ](#Codereviews)
 	* [Major changes during development](#Majorchnagesduringdevelopment)
 	* [Lighthouse](#Lighthouse)
-		* [Landing page](#Landingpage)
-		* [History Page](#Historypage)
-		* [Newsletter](#Newsletter)
-		* [Thank you page](#Thankyoupage)
-	* [Links](#Links)
     * [Deployment](#Deployment)
 * [Crediations and citataions](#Crediationsandcitataions)
-	* [Images ](#Images)
-	* [Video](#Video)
-	* [Code used ](#Codeused)
+	* [Images](#Images)
+	* [Code used](#Codeused)
 * [Acknowledgments](#Acknowledgments)
-* [Thank you !](#Thankyou!)
+* [Thank you!](#Thankyou!)
 
-    
-
-___
+---
 
 # USER EXPERIENCE
 
 ## Initial Discussion
-I wanted the user to learn about starwars in a quiz format and give funny feedback about the questions 
+I wanted the user to learn about Star Wars in a quiz format and give funny feedback about the questions.
 
 ## User Stories
 Based on the target audience and their needs, the following user stories were identified:
 
-* The site shouuld have diffrent levels of diffculty to accomadate all star wars fans 
-
-* The color there should be consitant and fmailiar with star wars fans
-
-* The user should be able to keep tarck of there score
-
-* The user should get funny promts and alets about there progres
+* The site should have different levels of difficulty to accommodate all Star Wars fans.
+* The color scheme should be consistent and familiar to Star Wars fans.
+* The user should be able to keep track of their score.
+* The user should get funny prompts and alerts about their progress.
 
 ## Design
-
-The over all desing was simple , I wanted and easily naviagtable page that relied healvy on the content of the page. 
+The overall design was simple. I wanted an easily navigable page that relied heavily on the content.
 
 ## Colour Scheme
-
-I went with a very simplistic back and white background with a yellow text and a simple font awesome font
-
+I went with a very simplistic black and white background with yellow text and a simple Font Awesome font.
 
 ## Typography
-
-I used a simply yet effeictive font from front awesome "Trispace" -Being honest i used it beacse it has space in the name
-
+I used a simple yet effective font from Font Awesome, "Trispace." Being honest, I used it because it has space in the name.
 
 ## Imagery
-This site uses only one image , and that is a background image, the reason for this was to keep the expericne as text based as possble
-
+This site uses only one image, which is a background image. The reason for this was to keep the experience as text-based as possible.
 
 ## Wireframes
-I created a simple wireframe for the first page layout -since th page is mostly the same it works well ,
+I created a simple wireframe for the first page layout. Since the page is mostly the same, it works well.
+![wire frame](assets/read-me-images/wireframe.jpg)
 
 
 ## Features
-
-
 1. Home/landing page
 ![home landing page](assets/read-me-images/homescreen.jpg)
 
@@ -97,7 +78,6 @@ I created a simple wireframe for the first page layout -since th page is mostly 
 
 4. End game
 ![end quiz](assets/read-me-images/end-game.jpg)
-
 
 # Technology Used
 This project primarily relies on JavaScript (JS) to build a dynamic and interactive web application. While HTML and CSS are still utilized, the main focus and driving force behind this project is the extensive use of JavaScript. Here's an overview of how these technologies are employed:
@@ -113,89 +93,66 @@ CSS is a stylesheet language that is responsible for the presentation and stylin
 
 While HTML and CSS are utilized in this project, the primary focus is on JavaScript. JavaScript enables the creation of a dynamic and interactive web application, allowing for enhanced user experiences and added functionality. By leveraging the power of JavaScript, you can build robust web applications that meet diverse requirements and cater to user needs.
 
-
 # Testing
-| User interaction 	| does the fucntion work as intended yes/no 	| why? 	|
-|:---:	|:---:	|---	|
-|  user clicks on "click me to start the game  	| yes 	|  	|
-| alert box picks name 	| yes 	|  	|
-| level selction loads 	| yes 	|  	|
-| user can pick any level  	| yes 	|  	|
-| quiz for  that level lods 	| yes 	|  	|
-| score is added up  	| yes 	|  	|
-| final score is shown with coorect message 	| yes 	|  	|
-| try again button works  	| yes 	|  	|
+| User interaction | Does the function work as intended? (Yes/No) | Why? |
+|:---:|:---:|---|
+| User clicks on "click me to start the game" | Yes | |
+| Alert box picks name | Yes | |
+| Level selection loads | Yes | |
+| User can pick any level | Yes | |
+| Quiz for that level loads | Yes | |
+| Score is added up | Yes | |
+| Final score is shown with correct message | Yes | |
+| Try again button works | Yes | |
 
-## Code validation 
+## Code Validation
 
-My JS was validated and corrected at some points by jshint
+My JS was validated and corrected at some points by JSHint:
 
-![Jshint](assets/read-me-images/jshintpp2.png)
+![JSHint](assets/read-me-images/jshintpp2.png)
 
-My css was check by W£ validator along with my html
-![css check](assets/read-me-images/finalcsscheck.jpg)
-![html check](assets/read-me-images/finalhtmlcheck.jpg)
+My CSS was checked by W3C Validator along with my HTML:
 
+![CSS check](assets/read-me-images/finalcsscheck.jpg)
+![HTML check](assets/read-me-images/finalhtmlcheck.jpg)
 
+## Issues I Ran Into
+From the start, I had issues with this project and a lot of imposter syndrome.
 
-## Issues I ran into-
- From the start i had issues with this project and a lot of imposter sydrome 
-
-1. Writes Block and Imposter Syndrome: Experienced periods of writer's block and imposter syndrome, making it challenging to progress with the project.
-
+1. Writer's Block and Imposter Syndrome: Experienced periods of writer's block and imposter syndrome, making it challenging to progress with the project.
 2. Understanding Redefining JavaScript Variables and Functions: Struggled with comprehending the concept of redeclaring JavaScript variables and functions and properly calling them in the code.
-
 3. Syntax Errors and Indexing: Faced difficulties in dealing with syntax errors and understanding how to properly index arrays or objects in JavaScript.
-
 4. User Inputs: Encountered issues related to handling user inputs and incorporating them into the application's functionality.
-
 5. Difference Between innerHTML, innerText, and .value: Confusion regarding the distinctions between innerHTML, innerText, and .value when manipulating and retrieving content from HTML elements.
-
 6. Logic Flow: Experienced challenges in designing and implementing a logical flow within the application, leading to issues with program behavior and expected outcomes.
-
-7. ### ios 
- ios gave me massive issues with my hivewr effiects and after talking with an expeirce dev @auxfuse he guided me in the right direction
+7. iOS: iOS gave me massive issues with my hover effects, and after talking with an experienced developer at Auxfuse, he guided me in the right direction.
 
 These are the issues that were encountered during the development process. Each of them presented unique challenges, requiring time and effort to resolve and overcome.
 
-## Lighthouse 
-![lighhouse test](assets/read-me-images/lighthouseresults.jpg)
+## Lighthouse
+![Lighthouse test](assets/read-me-images/lighthouseresults.jpg)
 
 ## Deployment
 1. Create a Repository: Start by creating a new repository on GitHub. Click on the "New" button on your GitHub profile page or navigate to your organization's repository page. Give your repository a name and make sure it's set to public.
-
 2. Add Files to the Repository: Add your website files to the repository. You can either initialize the repository with a README file or manually upload your HTML, CSS, JavaScript, and other necessary files. Ensure that your main HTML file is named index.html.
-
 3. Enable GitHub Pages: On your repository page, navigate to the "Settings" tab. Scroll down to the "GitHub Pages" section. Under "Source," select the branch you want to deploy. If your site is in the root directory, choose the main branch. If your site is in a specific folder, choose the main branch and specify the folder path. Click on the "Save" button.
-
 4. Verify Deployment: After saving, GitHub Pages will provide you with a link to your deployed site. It might take a few minutes for the deployment to complete. Visit the provided link to verify that your site is deployed correctly.
-
 5. Custom Domain (Optional): If you want to use a custom domain for your GitHub Pages site, you can set it up in the "Custom Domain" section of your repository's "Settings" tab. Follow the instructions provided by GitHub to configure your custom domain.
-
 6. Update and Redeploy: Whenever you make changes to your website files, commit and push them to the repository. GitHub Pages will automatically redeploy the updated site. Ensure that your changes are pushed to the correct branch specified in the GitHub Pages settings.
 
+# Credits and Citations
+1. All code used is my own, except for the questions section which I got ChatGPT to assemble, and I added it in the JavaScript elements.
+2. Auxfuse: A developer friend who helped me figure out the iOS hover issues.
+3. Background image was sourced from [Starry Sky Vectors by Vecteezy](https://www.vecteezy.com/free-vector/starry-sky).
+4. Carl, Alan, and my class were always on hand to help.
 
-# Crediations and citataions
+## Code Used
+All the code I used is my own.
 
-1. All code used is my own except for the questions section which i got chat gpt to assembly and i added in the js elemets
-
-2. auxfuse-developer friend helped me to figure out the ios hover issues
-
-3. bg image was sourced from <a href="https://www.vecteezy.com/free-vector/starry-sky">Starry Sky Vectors by Vecteezy</a>
-
-4. carl, alan, and my class were always on hand to help 
-
-
-## Code used 
-
-all the code i used is my own 
-
-
-## Content 
-the content is from chat gpt
+## Content
+The content is from ChatGPT.
 
 ## Acknowledgments
-I would like to thank my mentor(okwudiri_mentor ) , my class and alan my cohort facilatator for help with this project 
+I would like to thank my mentor (okwudiri_mentor), my class, and Alan, my cohort facilitator, for helping with this project.
 
-# Thank you !
-
+# Thank You!
