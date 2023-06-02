@@ -1,6 +1,6 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 ---
-
+![amirepossive](assets/read-me-images/amire.jpg)
 # [STARWARS QUIZ](https://benjamin-riordan.github.io/pp2-how-well-do-you-know-star-wars/) - A text based quiz of multiple choice, how well do you know Star Wars?
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/Benjamin-Riordan/pp2-how-well-do-you-know-star-wars?style=for-the-badge)
@@ -24,15 +24,12 @@
 * [Testing](#Testing)
 	* [Code valadation ](#Codevaladation)
 	* [Issues I ran into ](#Issuesiraninto)
-	* [Code reviews ](#Codereviews)
-	* [Major changes during development](#Majorchnagesduringdevelopment)
 	* [Lighthouse](#Lighthouse)
     * [Deployment](#Deployment)
 * [Crediations and citataions](#Crediationsandcitataions)
 	* [Images](#Images)
 	* [Code used](#Codeused)
 * [Acknowledgments](#Acknowledgments)
-* [Thank you!](#Thankyou!)
 
 ---
 
@@ -104,6 +101,9 @@ While HTML and CSS are utilized in this project, the primary focus is on JavaScr
 | Score is added up | Yes | |
 | Final score is shown with correct message | Yes | |
 | Try again button works | Yes | |
+
+# js logic flow chart 
+![jslogic flow chart](assets/read-me-images/jslogicflowchatsourcegojs.png)
 
 ## Code Validation
 
