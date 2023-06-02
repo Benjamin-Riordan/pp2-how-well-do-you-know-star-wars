@@ -89,19 +89,19 @@ I created a simple wireframe for the first page layout -since th page is mostly 
 1. Home/landing page
 
 
-2. History page
+2. level selection
 
 
-3. Newsletter/sign-up page
+3. quiz based on level
 
 
-4. Thank you page
+4. end game
 
 
 5. future implementations 
 
 
-6. Accessibility
+6. 
 
 ## Technolgy used 
 
