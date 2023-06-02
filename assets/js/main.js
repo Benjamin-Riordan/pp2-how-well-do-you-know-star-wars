@@ -156,7 +156,7 @@ const levels = [
 let currentQuestion = 0;
 let correctScore = 0;
 let wrongScore = 0;
-let userName =""
+let userName ="";
 let gameArea = document.getElementById("game-area");
 
  /**
@@ -199,7 +199,7 @@ function welcomeUser() {
         `;
     levelSelection();
     // this will return the user name back to the gobal variable to be called later by endgame()
-return userName
+return userName;
     }
 
 
@@ -231,7 +231,7 @@ function levelSelection(){
         } else if (levelSelected === "level-5") {
             displayQuestion(levelSelected);
         } else {
-          displayQuestion(levelSelected)
+          displayQuestion(levelSelected);
         }
     });
 }}
@@ -258,7 +258,7 @@ function displayQuestion(levelSelected) {
           const question = currentQuestionToAsk.question;
           const answerOptions = currentQuestionToAsk.options;
           const answer = currentQuestionToAsk.answer;
-          const shuffeldAnswersOptions =shuffleArray(answerOptions)
+          const shuffeldAnswersOptions =shuffleArray(answerOptions);
             
           // Display the question and answer options
           gameArea.innerHTML = `
@@ -327,7 +327,7 @@ function displayQuestion(levelSelected) {
         <div id="score-keeper">Correct <span id="Cscores">${correctScore}</span> Wrong <span id="Wscore">${wrongScore}</span></div>
         <button class="Btn-style" id="try-again">Try Again</button>
         `;
-    jediOrSith()
+    jediOrSith();
 
     // Reset the current question, correct score, and wrong score
     let tryAgainButton = document.getElementById("try-again");
@@ -349,8 +349,8 @@ document.addEventListener("DOMContentLoaded",function(){
 function jediOrSith(){
     let isUserjediOrSith = document.createElement("div");
     isUserjediOrSith.setAttribute("id", "is-jedi-or-not");
-    let button = document.getElementById("try-again")
-    gameArea.insertBefore(isUserjediOrSith, button)
+    let button = document.getElementById("try-again");
+    gameArea.insertBefore(isUserjediOrSith, button);
 
     if (correctScore < wrongScore) {
         isUserjediOrSith.innerText = "THE FORCE, KNOW YOU DO NOT";
