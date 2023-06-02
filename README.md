@@ -161,34 +161,41 @@ These are the issues that were encountered during the development process. Each 
 ## Lighthouse 
 ![lighhouse test](assets/read-me-images/lighthouseresults.jpg)
 
-## Links
-
-
-
-
-
 ## Deployment
+1. Create a Repository: Start by creating a new repository on GitHub. Click on the "New" button on your GitHub profile page or navigate to your organization's repository page. Give your repository a name and make sure it's set to public.
+
+2. Add Files to the Repository: Add your website files to the repository. You can either initialize the repository with a README file or manually upload your HTML, CSS, JavaScript, and other necessary files. Ensure that your main HTML file is named index.html.
+
+3. Enable GitHub Pages: On your repository page, navigate to the "Settings" tab. Scroll down to the "GitHub Pages" section. Under "Source," select the branch you want to deploy. If your site is in the root directory, choose the main branch. If your site is in a specific folder, choose the main branch and specify the folder path. Click on the "Save" button.
+
+4. Verify Deployment: After saving, GitHub Pages will provide you with a link to your deployed site. It might take a few minutes for the deployment to complete. Visit the provided link to verify that your site is deployed correctly.
+
+5. Custom Domain (Optional): If you want to use a custom domain for your GitHub Pages site, you can set it up in the "Custom Domain" section of your repository's "Settings" tab. Follow the instructions provided by GitHub to configure your custom domain.
+
+6. Update and Redeploy: Whenever you make changes to your website files, commit and push them to the repository. GitHub Pages will automatically redeploy the updated site. Ensure that your changes are pushed to the correct branch specified in the GitHub Pages settings.
 
 
 # Crediations and citataions
 
-## Images 
+1. All code used is my own except for the questions section which i got chat gpt to assembly and i added in the js elemets
 
+2. auxfuse-developer friend helped me to figure out the ios hover issues
 
+3. bg image was sourced from <a href="https://www.vecteezy.com/free-vector/starry-sky">Starry Sky Vectors by Vecteezy</a>
 
-
+4. carl, alan, and my class were always on hand to help 
 
 
 ## Code used 
 
+all the code i used is my own 
+
 
 ## Content 
-
+the content is from chat gpt
 
 ## Acknowledgments
-
+I would like to thank my mentor(okwudiri_mentor ) , my class and alan my cohort facilatator for help with this project 
 
 # Thank you !
 
-# atributions and crediations 
-<a href="https://www.vecteezy.com/free-vector/starry-sky">Starry Sky Vectors by Vecteezy</a>
